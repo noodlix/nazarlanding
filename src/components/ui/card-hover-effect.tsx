@@ -52,7 +52,7 @@ export const HoverEffect = ({
           <Card>
             <h4
               className={cn(
-                "text-black font-bold tracking-wide mt-4",
+                "text-black dark:text-white font-bold tracking-wide mt-4",
                 className
               )}
             >
@@ -60,7 +60,7 @@ export const HoverEffect = ({
             </h4>
             <p
               className={cn(
-                "mt-8 text-black tracking-wide leading-relaxed text-sm",
+                "mt-8 text-black dark:text-white tracking-wide leading-relaxed text-sm",
                 className
               )}
             >
@@ -96,7 +96,7 @@ export const Card = ({
       )}
     >
       <div className="relative z-50">
-        <div className="p-4 dark:text-white">{children}</div>
+        <div className="p-4">{children}</div>
       </div>
     </div>
   );
@@ -112,7 +112,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-black tracking-wide leading-relaxed text-sm",
+        "mt-8 text-black dark:text-white tracking-wide leading-relaxed text-sm",
         className
       )}
     >
