@@ -2,8 +2,8 @@ import React from "react";
 
 export const Table = () => {
   return (
-    <div className="w-full flex items-center justify-center">
-      <table className="table-auto border-collapse w-3/5">
+    <div className="w-[vw] flex items-center justify-center">
+      <table className="table-auto border-collapse w-3/5 bg-slate-500">
         <thead>
           <tr>
             <th className="border px-1 py-1 text-xs">Advantage</th>
