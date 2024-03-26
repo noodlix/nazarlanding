@@ -10,7 +10,7 @@ export function HeroScrollDemo() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-                student academic performance ai tracker <br />
+              student academic performance ai tracker <br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                 nazar.ai
               </span>
@@ -26,7 +26,8 @@ export const users = [
   {
     name: "Manu Arora",
     designation: "Founder, Algochurn",
-    image: "https://us.images.westend61.de/0001742294pw/pretty-teenage-student-paying-attention-to-lecture-in-classroom-woman-studying-at-the-college-classroom-JLPSF15367.jpg",
+    image:
+      "https://us.images.westend61.de/0001742294pw/pretty-teenage-student-paying-attention-to-lecture-in-classroom-woman-studying-at-the-college-classroom-JLPSF15367.jpg",
     badge: "Mentor",
   },
 ];
