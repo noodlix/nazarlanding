@@ -52,7 +52,7 @@ export const HoverEffect = ({
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
-            <CardImg src={item.src}></CardImg>
+            <CardImg src={item.src} />
           </Card>
         </Link>
       ))}
@@ -95,11 +95,9 @@ export const CardTitle = ({
 };
 export const CardImg = ({
   className,
-  children,
   src,
 }: {
   className?: string;
-  children: React.ReactNode;
   src: string;
 }) => {
   return (
