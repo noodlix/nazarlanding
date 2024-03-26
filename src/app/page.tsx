@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { HeroScrollDemo } from "./scrollonpage";
 import { Video } from "@/components/ui/video";
 import { Table } from "@/components/ui/table";
-// import { Cards } from "@/components/ui/cards";
+import { Cards } from "@/components/ui/cards";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroScrollDemo/>
       <Video/>
       <Table/>
-      {/* <Cards/> */}
+      <Cards/>
     </main>
   );
 }

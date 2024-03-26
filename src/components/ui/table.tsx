@@ -25,13 +25,13 @@ export const Table = () => {
         </thead>
         <tbody>
             <tr>
-              <td className="border px-4 py-2">Tracking students' emotions</td>
+              <td className="border px-4 py-2">Tracking students&apos; emotions</td>
               <td className="border px-4 py-2">✓ Uses Face Emotion Recognition (FER)</td>
               <td className="border px-4 py-2">❌ Not specialized in emotion tracking</td>
               <td className="border px-4 py-2">✓ Provides Emotion SDK for analysis</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2">Tracking students' head positions</td>
+              <td className="border px-4 py-2">Tracking students&apos; head positions</td>
               <td className="border px-4 py-2">✓ Uses Head Pose Estimation (HPE)</td>
               <td className="border px-4 py-2">❌ Not specialized in head pose estimation</td>
               <td className="border px-4 py-2">❌ Not specialized in head pose estimation</td>
