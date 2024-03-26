@@ -94,21 +94,23 @@ export const CardTitle = ({
   );
 };
 export const CardImg = ({
-    className,
-    children,
-    src,
-  }: {
-    className?: string;
-    children: React.ReactNode;
-  }) => {
-    return (
-        <img className={cn("text-black font-bold tracking-wide mt-4", className)}
-              src={src}
-            //   className="rounded-md text-sm h-full w-full"
-              alt=""
-            />
-    );
-  }
+  className,
+  children,
+  src,
+}: {
+  className?: string;
+  children: React.ReactNode;
+  src: string;
+}) => {
+  return (
+    <img
+      className={cn("text-black font-bold tracking-wide mt-4", className)}
+      src={src}
+      //   className="rounded-md text-sm h-full w-full"
+      alt=""
+    />
+  );
+};
 
 export const CardDescription = ({
   className,
