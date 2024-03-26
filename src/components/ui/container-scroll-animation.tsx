@@ -1,18 +1,13 @@
 "use client";
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 
 export const ContainerScroll = ({
-  users,
   titleComponent,
+  children,
 }: {
-  users: {
-    name: string;
-    designation: string;
-    image: string;
-    badge?: string;
-  }[];
   titleComponent: string | React.ReactNode;
+  children: React.ReactNode;
 }) => {
   const containerRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
@@ -41,7 +36,7 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[50rem] md:h-[70rem] flex items-center justify-center relative p-2 md:p-20"
+      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
       ref={containerRef}
     >
       <div
@@ -51,12 +46,9 @@ export const ContainerScroll = ({
         }}
       >
         <Header translate={translate} titleComponent={titleComponent} />
-        <Card
-          rotate={rotate}
-          translate={translate}
-          scale={scale}
-          users={users}
-        />
+        <Card rotate={rotate} translate={translate} scale={scale}>
+          {children}
+        </Card>
       </div>
     </div>
   );
@@ -78,49 +70,154 @@ export const Header = ({ translate, titleComponent }: any) => {
 export const Card = ({
   rotate,
   scale,
-  translate,
-  users,
+  children,
 }: {
-  rotate: any;
-  scale: any;
-  translate: any;
-  users: {
-    name: string;
-    designation: string;
-    image: string;
-    badge?: string;
-  }[];
+  rotate: MotionValue<number>;
+  scale: MotionValue<number>;
+  translate: MotionValue<number>;
+  children: React.ReactNode;
 }) => {
   return (
     <motion.div
       style={{
-        rotateX: rotate, // rotate in X-axis
+        rotateX: rotate,
         scale,
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="my-8 max-w-5xl -mt-12 mx-auto h-[18rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
-      <div className="bg-black h-full w-full rounded-2xl overflow-hidden">
-        {users.map((user, idx: number) => (
-          <motion.div
-            key={`user-${idx}`}
-            className="bg-white rounded-md cursor-pointer relative"
-            style={{ translateY: translate }}
-
-            whileHover={{
-              boxShadow:
-                "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-            }}
-          >
-            <img
-              src={user.image}
-              className="rounded-md text-sm h-full w-full"
-              alt="thumbnail"
-            />
-          </motion.div>
-        ))}
+      <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
+        {children}
       </div>
     </motion.div>
   );
 };
+
+
+// "use client";
+// import React, { useRef } from "react";
+// import { useScroll, useTransform, motion } from "framer-motion";
+
+// export const ContainerScroll = ({
+//   users,
+//   titleComponent,
+// }: {
+//   users: {
+//     name: string;
+//     designation: string;
+//     image: string;
+//     badge?: string;
+//   }[];
+//   titleComponent: string | React.ReactNode;
+// }) => {
+//   const containerRef = useRef<any>(null);
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//   });
+//   const [isMobile, setIsMobile] = React.useState(false);
+
+//   React.useEffect(() => {
+//     const checkMobile = () => {
+//       setIsMobile(window.innerWidth <= 768);
+//     };
+//     checkMobile();
+//     window.addEventListener("resize", checkMobile);
+//     return () => {
+//       window.removeEventListener("resize", checkMobile);
+//     };
+//   }, []);
+
+//   const scaleDimensions = () => {
+//     return isMobile ? [0.7, 0.9] : [1.05, 1];
+//   };
+
+//   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+//   const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
+//   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
+//   return (
+//     <div
+//       className="h-[50rem] md:h-[70rem] flex items-center justify-center relative p-2 md:p-20"
+//       ref={containerRef}
+//     >
+//       <div
+//         className="py-10 md:py-40 w-full relative"
+//         style={{
+//           perspective: "1000px",
+//         }}
+//       >
+//         <Header translate={translate} titleComponent={titleComponent} />
+//         <Card
+//           rotate={rotate}
+//           translate={translate}
+//           scale={scale}
+//           users={users}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const Header = ({ translate, titleComponent }: any) => {
+//   return (
+//     <motion.div
+//       style={{
+//         translateY: translate,
+//       }}
+//       className="div max-w-5xl mx-auto text-center"
+//     >
+//       {titleComponent}
+//     </motion.div>
+//   );
+// };
+
+// export const Card = ({
+//   rotate,
+//   scale,
+//   translate,
+//   users,
+// }: {
+//   rotate: any;
+//   scale: any;
+//   translate: any;
+//   users: {
+//     name: string;
+//     designation: string;
+//     image: string;
+//     badge?: string;
+//   }[];
+// }) => {
+//   return (
+//     <motion.div
+//       style={{
+//         rotateX: rotate, // rotate in X-axis
+//         scale,
+//         boxShadow:
+//           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+//       }}
+//       className="my-8 max-w-5xl -mt-12 mx-auto h-[18rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+//     >
+//       <div className="bg-black h-full w-full rounded-2xl overflow-hidden">
+//         {users.map((user, idx: number) => (
+//           <motion.div
+//             key={`user-${idx}`}
+//             className="bg-white rounded-md cursor-pointer relative"
+//             style={{ translateY: translate }}
+
+//             whileHover={{
+//               boxShadow:
+//                 "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+//             }}
+//           >
+//             <img
+//               src={user.image}
+//               className="rounded-md text-sm h-full w-full"
+//               alt="thumbnail"
+//             />
+//           </motion.div>
+//         ))}
+//       </div>
+//     </motion.div>
+//   );
+// };
