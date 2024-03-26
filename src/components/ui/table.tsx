@@ -3,92 +3,93 @@ import React from "react";
 export const Table = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <table className="table-auto border-collapse w-4/5">
+      <table className="table-auto border-collapse w-3/5">
         <thead>
           <tr>
-            <th className="border px-4 py-2">Advantage</th>
-            <th className="border px-4 py-2">Nazar AI</th>
-            <th className="border px-4 py-2">Zoom IQ</th>
-            <th className="border px-4 py-2">Affectiva</th>
+            <th className="border px-1 py-1">Advantage</th>
+            <th className="border px-1 py-1">Nazar AI</th>
+            <th className="border px-1 py-1">Zoom IQ</th>
+            <th className="border px-1 py-1">Affectiva</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               Tracking students&apos; emotions
             </td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               ✓ Uses Face Emotion Recognition (FER)
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in emotion tracking
+            <td className="border px-1 py-1">
+              ❌
             </td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               ✓ Provides Emotion SDK for analysis
             </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               Tracking students&apos; head positions
             </td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               ✓ Uses Head Pose Estimation (HPE)
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in head pose estimation
+            <td className="border px-1 py-1">
+              ❌
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in head pose estimation
+            <td className="border px-1 py-1">
+              ❌
             </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               Revealing learning characteristics
             </td>
-            <td className="border px-4 py-2">✓ Data analysis using ChatGPT4</td>
-            <td className="border px-4 py-2">
-              ❌ Focuses on recording and transcribing
+            <td className="border px-1 py-1">✓ Data analysis using ChatGPT4</td>
+            <td className="border px-1 py-1">
+              ❌
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in learning characteristics
+            <td className="border px-1 py-1">
+              ❌
             </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Analyzing emotional indicators</td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">Analyzing emotional indicators</td>
+            <td className="border px-1 py-1">
               ✓ Collects emotional data during lessons
             </td>
-            <td className="border px-4 py-2">
-              ❌ Lacks focus on emotional indicators
+            <td className="border px-1 py-1">
+              ❌
             </td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               ✓ Provides Emotion SDK for analysis
             </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               Identifying student distractions
             </td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">
               ✓ Tracks when students are distracted
             </td>
-            <td className="border px-4 py-2">
-              ❌ Lacks focus on student distractions
+            <td className="border px-1 py-1">
+            ✓ Tracks when students are distracted
+              
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in identifying distractions
+            <td className="border px-1 py-1">
+              ❌ 
             </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Evaluating teaching methods</td>
-            <td className="border px-4 py-2">
+            <td className="border px-1 py-1">Evaluating teaching methods</td>
+            <td className="border px-1 py-1">
               ✓ Uses GPT4 for method effectiveness
             </td>
-            <td className="border px-4 py-2">
-              ❌ Focuses on coaching and conversation metrics
+            <td className="border px-1 py-1">
+              ❌
             </td>
-            <td className="border px-4 py-2">
-              ❌ Not specialized in teaching method evaluation
+            <td className="border px-1 py-1">
+              ❌
             </td>
           </tr>
         </tbody>
