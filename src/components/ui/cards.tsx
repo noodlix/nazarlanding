@@ -5,7 +5,7 @@ import { HoverEffect } from "../ui/card-hover-effect";
 export const Cards = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="w-4/5 flex items-center justify-center">
+      <div className=" flex items-center justify-center">
         <HoverEffect items={projects} />
       </div>
     </div>
