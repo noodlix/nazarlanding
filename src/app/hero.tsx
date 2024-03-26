@@ -12,7 +12,7 @@ export function Hero() {
             <span className="text-4xl md:text-[6rem] font-extrabold mt-1 leading-none">
               nazar.ai
             </span>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
+            <h1 className="text-3xl text-black dark:text-white">
               student academic performance tracker <br />
             </h1>
           </>
@@ -27,7 +27,7 @@ export const users = [
     name: "Manu Arora",
     designation: "Founder, Algochurn",
     image:
-      "https://us.images.westend61.de/0001742294pw/pretty-teenage-student-paying-attention-to-lecture-in-classroom-woman-studying-at-the-college-classroom-JLPSF15367.jpg",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xhc3Nyb29tfGVufDB8fDB8fHww",
     badge: "Mentor",
   },
 ];

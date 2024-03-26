@@ -20,7 +20,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2  py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10",
         className
       )}
     >
@@ -50,9 +50,30 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <CardImg src={item.src} />
+            <h4
+              className={cn(
+                "text-black font-bold tracking-wide mt-4",
+                className
+              )}
+            >
+              {item.title}
+            </h4>
+            <p
+              className={cn(
+                "mt-8 text-black tracking-wide leading-relaxed text-sm",
+                className
+              )}
+            >
+              {item.description}
+            </p>
+            <img
+              className={cn(
+                "text-black font-bold tracking-wide mt-4",
+                className
+              )}
+              alt="..."
+              src={item.src}
+            />
           </Card>
         </Link>
       ))}
@@ -70,7 +91,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-slate-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full max-w-[400px] p-4 overflow-hidden bg-slate-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -78,35 +99,6 @@ export const Card = ({
         <div className="p-4">{children}</div>
       </div>
     </div>
-  );
-};
-export const CardTitle = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <h4 className={cn("text-black font-bold tracking-wide mt-4", className)}>
-      {children}
-    </h4>
-  );
-};
-export const CardImg = ({
-  className,
-  src,
-}: {
-  className?: string;
-  src: string;
-}) => {
-  return (
-    <img
-      className={cn("text-black font-bold tracking-wide mt-4", className)}
-      src={src}
-      //   className="rounded-md text-sm h-full w-full"
-      alt=""
-    />
   );
 };
 
