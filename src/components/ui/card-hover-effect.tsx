@@ -91,12 +91,12 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full max-w-[400px] p-4 overflow-hidden bg-slate-200 dark:bg-slate-700 dark:text-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full max-w-[400px] p-4 overflow-hidden bg-slate-200 dark:bg-slate-900 dark:text-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-4 dark:text-white">{children}</div>
       </div>
     </div>
   );
